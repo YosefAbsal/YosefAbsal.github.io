@@ -17,7 +17,7 @@ const server = http.createServer((req, res) => {
 
         res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
         res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify(`http://127.0.0.1:5200/go/${newId}`));
+        res.end(JSON.stringify(`https://yosefabsal.github.io/go/${newId}`));
 
     }
     else {
