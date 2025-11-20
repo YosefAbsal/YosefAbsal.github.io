@@ -1,0 +1,227 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=2.0">
+        <title>Yosef's Website</title>
+    </head>
+    
+    <script>
+        async function call(){
+            var usrText = document.getElementById('textA');
+            if (usrText.value){
+                var url = `http://127.0.0.1:5200/${usrText.value}`;
+                try{
+                    await fetch(url)
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log(data);
+                            document.getElementById('newUrl').innerText = data;
+                        });
+                }
+                catch(err){
+                    console.log(err);
+                }
+            }
+        }
+    </script>
+
+    <body>
+            <ul class="navBar">
+                <li>Yosef.absal@gmail.com</li>
+
+                <li>
+                    <a href="https://www.linkedin.com/in/yosefabsaleh" 
+                    target="_blank">
+                        LinkedIn
+                    </a>
+                </li>
+
+                <li><a href="#hTech">Technologies</a></li>
+                
+                <li><a href="#hProj">Projects</a></li>
+
+                <li><a href="#idResume">Resume</a></li>
+            </ul>
+
+        <div class="portrait">
+            <div style="margin-left: 20px;">
+                <img src="pics/Goosepicture.jpg">
+            </div>
+            
+            <div style="margin-top: 50px;">
+                <p style="margin-left: 5px; text-align: left;">
+                    Hello, my name is Yosef Abou-Saleh and I'm an Arizona State University <br>
+                    graduate with a bachelors degree in computer science. I have hands-on <br>
+                    experience designing and developing fullstack web applications <br>
+                    using JavaScript, React, and C#. I'm interested in building scalable <br>
+                    applications and improving development workflow. <br>
+                </p>
+            </div>
+        </div>
+
+        <div class="technologyParent">
+
+            <h1 id="hTech" class="headTech">Technologies </h1>
+
+            <div class="technology">
+                <div class="tablesParent">
+
+                    <table style="margin-top: 25px;">
+                        <tr>
+                            <td style="background-color: rgb(52, 52, 192);">
+                                C++
+                            </td>
+
+                            <td style="background-color: rgb(52, 52, 192);">
+                                C#
+                            </td>
+
+                            <td style="background-color: rgb(179, 39, 26);">
+                                Java
+                            </td>
+
+                            <td style="background-color: rgb(179, 156, 26);">
+                                JavaScript
+                            </td>
+
+                            <td style="background-color: rgb(24, 100, 177);">
+                                Python
+                            </td>
+                        </tr>
+                    </table>
+    
+                    <table style="margin-left: 70px;">
+                        <tr>
+                            <td style="background-color: rgb(70, 112, 228);">
+                                VS Code
+                            </td>
+
+                            <td style="background-color: rgb(178, 62, 12);">
+                                Git
+                            </td>
+
+                            <td style="background-color: rgb(72, 72, 186);">
+                                Axios
+                            </td>
+
+                            <td style="background-color: rgb(32, 132, 17);">
+                                Node.js
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="background-color: rgb(32, 32, 55);">
+                                Kafka
+                            </td>
+
+                            <td style="background-color: rgb(20, 142, 151);">
+                                React
+                            </td>
+
+                            <td style="background-color: rgb(160, 75, 9);">
+                                HTML
+                            </td>
+
+                            <td style="background-color: rgb(135, 18, 156);">
+                                CSS
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="projectsParent">
+
+            <h1 id="hProj" class="headProj">Projects</h1>
+
+            <div class="projects">
+                <div style="margin-right: 20px;">
+
+                    <h2>Cafeteria Web Application</h2>
+                    <ul>
+                        <li>
+                            Developed an online ordering system with an admin dashboard
+                        </li>
+
+                        <li>
+                            Designed and Developed Kafka hybrid Model-View-Control/Event-driven <br>
+                            architecture to improve scalability
+                        </li>
+
+                        <li>
+                            Implemented role-based authentication and account verification
+                        </li>
+                    </ul>
+
+                    <h2>Legal Text Aggregate </h2>
+                    <ul>
+                        <li>
+                            Built a web platform featuring an AI chatbot that <br>
+                            summarizes and interprets legal text
+                        </li>
+
+                        <li>
+                            Reduced response latency by 20% by optimizing query handling
+                        </li>
+
+                        <li>
+                            Integrated OpenAI API and Congress API with Axios for real-time <br>
+                            data retrieval and analysis
+                        </li>
+                    </ul>
+
+                    <h2>Web Application Login</h2>
+                    <ul>
+                        <li>
+                            Developed a C# ASP.NET web app with secure login and <br>
+                            access control for web services
+                        </li>
+
+                        <li>
+                            Implemented  CAPTCHA verification and XML storage for credentials
+                        </li>
+
+                        <li>
+                            Created a custom encryption DLL to secure user data during authentication
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="textarea">  
+                    <h1>This is a URL-shortener</h1>
+
+                    <div>
+                        <p>Place a URL into the text area and it will return a shortened URL.</p>
+                    </div> 
+
+                    <div class="textButton">
+                        <textarea id="textA" placeholder="Input a URL. Ex: https://google.com"></textarea>
+                        <button onclick="call()">Generate</button>
+                    </div>
+
+                    <div>
+                        <p>New URL:</p>
+
+                        <strong>
+                            <p id="newUrl" class="newUrl"></p>
+                        </strong>
+                    </div>
+                </div>
+            </div>
+
+            <div id="idResume" class="resume">
+                    <img class="resume" src="pics/Screenshot 2025-11-18 200106.png">
+            </div>
+        </div>
+
+
+        <div class="contactInfo">
+            
+        </div>
+    </body>
+    </html>
