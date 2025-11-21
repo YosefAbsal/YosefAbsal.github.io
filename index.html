@@ -12,7 +12,7 @@
         async function call(){
             var usrText = document.getElementById('textA');
             if (usrText.value){
-                var url = `http://127.0.0.1:5200/${usrText.value}`;
+                var url = `https://masurlshort-69k5.onrender.com/${usrText.value}`;
                 try{
                     await fetch(url)
                         .then(res => res.json())
