@@ -136,9 +136,14 @@
 
                     <div class="textAndButton">
                         <textarea id="textA" class="textArea" placeholder="Input a URL. Ex: https://google.com"></textarea>
+                        
                         <button onclick="call()">Generate</button>
                     </div>
 
+                    <p class="response-Note">
+                        <strong> Note: </strong>the server may be asleep. Response may take up to 1 minute. 
+                    </p>
+                    
                     <p>New URL:</p>
 
                     <strong>
@@ -161,21 +166,20 @@
                 if (!usrText.value.includes('https://')) 
                     usrText.value = 'https://' + usrText.value;
                 
-                else if (usrText.value) {
-                    var url = `https://masurlshort-69k5.onrender.com/${usrText.value}`;
+                var url = `https://masurlshort-69k5.onrender.com/${usrText.value}`;
 
-                    try {
-                        await fetch(url)
-                            .then(res => res.json())
-                            .then(data => {
-                                console.log(data);
-                                document.getElementById('newUrl').innerText = data;
-                            });
-                    }
-                    catch(err) {
-                        console.log(err);
-                    }
+                try {
+                    await fetch(url)
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log(data);
+                            document.getElementById('newUrl').innerText = data;
+                        });
                 }
+                catch(err) {
+                    console.log(err);
+                }
+
             }
 
             const hamburger = document.getElementById("hamburger");

@@ -171,6 +171,11 @@ h1.project {
     color: #ffffff;
 }
 
+.response-Note {
+    font-style: italic;
+    color: rgb(172, 145, 115);
+}
+
 /* RESUME */
 
 .resume-container {
