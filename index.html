@@ -4,153 +4,81 @@
     <head>
         <link rel="stylesheet" href="index.css">
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=2.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Yosef's Website</title>
     </head>
-    
-    <script>
-        async function call(){
-            var usrText = document.getElementById('textA');
-            if (usrText.value){
-                var url = `https://masurlshort-69k5.onrender.com/${usrText.value}`;
-                try{
-                    await fetch(url)
-                        .then(res => res.json())
-                        .then(data => {
-                            console.log(data);
-                            document.getElementById('newUrl').innerText = data;
-                        });
-                }
-                catch(err){
-                    console.log(err);
-                }
-            }
-        }
-    </script>
 
     <body>
-        <br id="topWeb">
-        <ul  class="navBar">
-            <li>Yosef.absal@gmail.com</li>
 
-            <li>
-                <a style="border-right: 2px solid blue;
-                padding-right: 40px;" 
-                href="https://www.linkedin.com/in/yosefabsaleh" 
-                target="_blank">
-                    LinkedIn
-                </a>
-            </li>
+        <div class="navBar-container">
+            <button id="hamburger" class="hamburger"> ☰ </button>
 
-            <li><a href="#topWeb">About</a></li>
-
-            <li><a href="#techPlace">Technologies</a></li>
-            
-            <li><a href="#projPlace">Projects</a></li>
-
-            <li><a href="#resumePlace">Resume</a></li>
-        </ul>
-
-        <div class="portrait">
-            <div style="margin-left: 20px;">
-                <img src="pics/Goosepicture.jpg">
-            </div>
-            
-            <div style="margin-top: 50px;">
-                <p style="margin-left: 5px; text-align: left;">
-                    Hello, my name is Yosef Abou-Saleh and I'm an Arizona State University <br>
-                    graduate with a bachelors degree in computer science. I have hands-on <br>
-                    experience designing and developing fullstack web applications <br>
-                    using JavaScript, React, and C#. I'm interested in building scalable <br>
-                    applications and improving development workflow. <br>
-                </p>
-            </div>
+            <ul class="navLinks" id="navLinks">
+                <li>Yosef.absal@gmail.com</li>
+                <li><a href="https://www.linkedin.com/in/yosefabsaleh" target="_blank">
+                    LinkedIn</a>
+                </li>
+                <li><a href="#toAbout">About</a></li>
+                <li><a href="#toTech">Technologies</a></li>
+                <li><a href="#toProj">Projects</a></li>
+                <li><a href="#toRes">Resume</a></li>
+            </ul>
         </div>
 
-        <br id="techPlace">
+        <div id="toAbout"></div>
         <br>
-        <div class="technologyParent">
 
-            <h1 id="hTech" class="headTech">Technologies </h1>
+        <div class="content-container">
+            <div class="about-container">
+                <div class="portrait-container">
+                    <img src="/pics/Goosepicture.jpg">
+                </div>
 
-            <div class="technology">
-                <div class="tablesParent">
-
-                    <table style="margin-top: 25px;">
-                        <tr>
-                            <td style="background-color: rgb(52, 52, 192);">
-                                C++
-                            </td>
-
-                            <td style="background-color: rgb(52, 52, 192);">
-                                C#
-                            </td>
-
-                            <td style="background-color: rgb(179, 39, 26);">
-                                Java
-                            </td>
-
-                            <td style="background-color: rgb(179, 156, 26);">
-                                JavaScript
-                            </td>
-
-                            <td style="background-color: rgb(24, 100, 177);">
-                                Python
-                            </td>
-                        </tr>
-                    </table>
-    
-                    <table style="margin-left: 70px;">
-                        <tr>
-                            <td style="background-color: rgb(70, 112, 228);">
-                                VS Code
-                            </td>
-
-                            <td style="background-color: rgb(178, 62, 12);">
-                                Git
-                            </td>
-
-                            <td style="background-color: rgb(72, 72, 186);">
-                                Axios
-                            </td>
-
-                            <td style="background-color: rgb(32, 132, 17);">
-                                Node.js
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td style="background-color: rgb(32, 32, 55);">
-                                Kafka
-                            </td>
-
-                            <td style="background-color: rgb(20, 142, 151);">
-                                React
-                            </td>
-
-                            <td style="background-color: rgb(160, 75, 9);">
-                                HTML
-                            </td>
-
-                            <td style="background-color: rgb(135, 18, 156);">
-                                CSS
-                            </td>
-                        </tr>
-                    </table>
-
+                <div class="p-container">
+                    <p>
+                        Hello, my name is Yosef Abou-Saleh and I'm an Arizona State University 
+                        graduate with a bachelors degree in computer science.   <br><br>
+                        I have hands-on experience designing and developing fullstack web applications 
+                        using JavaScript, React, and C#. I'm interested in building scalable 
+                        applications and improving development workflow. 
+                    </p>
                 </div>
             </div>
-        </div>
-        
-        <br id="projPlace">
-        <br>
-        <div class="projectsParent">
 
-            <h1 id="hProj" class="headProj">Projects</h1>
+            <div id="toTech"></div>
+            <br>
 
-            <div class="projects">
-                <div style="margin-right: 20px;">
+            <div class="technology-container">
+                <h1 class="technology">Technologies</h1>
 
+                <div class="techList-container">
+                    <ul>
+                        <li> <img src="pics/ISO_C++_Logo.svg.png"> </li>
+                        <li> <img src="pics/Logo_C_sharp.svg.png"> </li>
+                        <li> <img style="width: 4.5vb;" src="pics/Java_(Old).svg"> </li>
+                        <li> <img src="pics/JavaScript-logo.png"> </li>
+                        <li> <img src="pics/Python-logo-notext.svg.png"> </li>
+                    </ul>
+
+                    <ul>
+                        <li> <img src="pics/Visual_Studio_Code_1.35_icon.svg.png"> </li>
+                        <li> <img src="pics/Git-Icon-1788C.png"> </li>
+                        <li> <img src="pics/axios.png"> </li>
+                        <li> <img src="pics/1_bc9pmTiyKR0WNPka2w3e0Q.png" > </li>
+                        <li> <img src="pics/TALL - White on Transparent.png"> </li>
+                        <li> <img src="pics/4248142.png"> </li>
+                        <li><img src="pics/136527.png"> </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="toProj"></div>
+            <br>
+
+            <div class="projects-container">
+                <h1 class="project">Projects</h1>
+
+                <div class="projects-section">
                     <h2>Cafeteria Web Application</h2>
                     <ul>
                         <li>
@@ -158,7 +86,7 @@
                         </li>
 
                         <li>
-                            Designed and Developed Kafka hybrid Model-View-Control/Event-driven <br>
+                            Designed and Developed Kafka hybrid Model-View-Control/Event-driven 
                             architecture to improve scalability
                         </li>
 
@@ -170,7 +98,7 @@
                     <h2>Legal Text Aggregate </h2>
                     <ul>
                         <li>
-                            Built a web platform featuring an AI chatbot that <br>
+                            Built a web platform featuring an AI chatbot that 
                             summarizes and interprets legal text
                         </li>
 
@@ -179,7 +107,7 @@
                         </li>
 
                         <li>
-                            Integrated OpenAI API and Congress API with Axios for real-time <br>
+                            Integrated OpenAI API and Congress API with Axios for real-time 
                             data retrieval and analysis
                         </li>
                     </ul>
@@ -187,7 +115,7 @@
                     <h2>Web Application Login</h2>
                     <ul>
                         <li>
-                            Developed a C# ASP.NET web app with secure login and <br>
+                            Developed a C# ASP.NET web app with secure login and
                             access control for web services
                         </li>
 
@@ -201,38 +129,61 @@
                     </ul>
                 </div>
 
-                <div class="textarea">  
-                    <h1>This is a URL-shortener</h1>
+                <div class="tryIt-container">
+                    <h2>This is a URL-shortener</h2>
 
-                    <div>
-                        <p>Place a URL into the text area and it will return a shortened URL.</p>
-                    </div> 
+                    <p>Place a URL into the text area and it will return a shortened URL.</p>
 
-                    <div class="textButton">
-                        <textarea id="textA" placeholder="Input a URL. Ex: https://google.com"></textarea>
+                    <div class="textAndButton">
+                        <textarea id="textA" class="textArea" placeholder="Input a URL. Ex: https://google.com"></textarea>
                         <button onclick="call()">Generate</button>
                     </div>
 
-                    <div>
-                        <p>New URL:</p>
+                    <p>New URL:</p>
 
-                        <strong>
-                            <p id="newUrl" class="newUrl"></p>
-                        </strong>
-                    </div>
+                    <strong>
+                        <p id="newUrl" class="newUrl"></p>
+                    </strong>
                 </div>
             </div>
-
-            <br id="resumePlace">
-            <br>
-            <div id="idResume" class="resume">
-                    <img class="resume" src="pics/Screenshot 2025-11-18 200106.png">
-            </div>
         </div>
 
+        <div id="toRes"></div>
 
-        <div class="contactInfo">
-            
+        <div class="resume-container">
+                <img class="resume" src="pics/Screenshot 2025-11-18 200106.png">
         </div>
+
+        <script>
+            async function call() {
+                var usrText = document.getElementById('textA');
+
+                if (!usrText.value.includes('https://')) 
+                    usrText.value = 'https://' + usrText.value;
+                
+                else if (usrText.value) {
+                    var url = `https://masurlshort-69k5.onrender.com/${usrText.value}`;
+
+                    try {
+                        await fetch(url)
+                            .then(res => res.json())
+                            .then(data => {
+                                console.log(data);
+                                document.getElementById('newUrl').innerText = data;
+                            });
+                    }
+                    catch(err) {
+                        console.log(err);
+                    }
+                }
+            }
+
+            const hamburger = document.getElementById("hamburger");
+            const navLinks = document.getElementById("navLinks");
+
+            hamburger.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        </script>
     </body>
     </html>
