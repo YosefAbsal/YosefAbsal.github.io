@@ -204,7 +204,7 @@ h1.project {
 
     .navBar-container ul {
         display: none;
-        background-color: rgba(77, 62, 133, 0.212);
+        background-color: rgba(77, 62, 133, 0.952);
     }
 
     /* ACTIVATE NAVBAR ON CLICK */
@@ -228,7 +228,7 @@ h1.project {
     }
 
     .hamburger:hover {
-        background-color:rgba(231, 130, 14, 0.103);
+        background-color:rgb(151, 85, 8);
     }
 
 }
