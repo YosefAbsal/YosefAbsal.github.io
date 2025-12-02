@@ -19,10 +19,16 @@ h2 {
 /* CONTENT CONTAINER */
 
 .content-container {
-    margin-top: 2vh;
-    margin-left: 5vb;
-    margin-right: 5vb;
-    margin-bottom: 7vb;
+    padding-top: 2vh;
+    padding-bottom: 7vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    margin-left: 2vb;
+    margin-right: 2vb;
+    margin-bottom: 2vb;
+    background-color: rgba(25, 29, 85, 0.418);
+    border: 1vh solid rgba(92, 56, 27, 0.459);
+
 }
 /* HIDE HAMBURGER */
 
