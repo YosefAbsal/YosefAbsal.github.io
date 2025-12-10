@@ -27,7 +27,7 @@ h2 {
     margin-right: 2vb;
     margin-bottom: 2vb;
     background-color: rgba(25, 29, 85, 0.418);
-    border: 1vh solid rgba(92, 56, 27, 0.459);
+    /* border: 1vh solid rgba(92, 56, 27, 0.459); */
 
 }
 /* HIDE HAMBURGER */
@@ -84,6 +84,7 @@ img {
 }
 
 .about-container p {
+    text-align: left;
     max-width: 600px;
 }
 
@@ -132,18 +133,35 @@ h1.project {
 
 .projects-section {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     margin-bottom: 6vb;
     align-items: center;
 }
 
-.projects-section ul {
-    max-width: 400px;
+.projects-section div {
+    max-width: 600px;
 }
 
-.projects-section ul li{
-    margin-bottom: 1vb;
+.projects-section strong {
+    margin: 0;
+    color: rgb(201, 108, 2);
+    font-size: xx-large;
+}
+
+.projects-section .techStack {
+    color: rgb(99, 142, 221);
+    font-style: italic;
+    font-size: larger;
+}
+
+.projects-section .techItems {
+    color: rgb(0, 124, 240);
+    font-style: italic;
+}
+
+.projects-section .currProj {
+    color: rgb(199, 49, 23);
+    
 }
 
 /* PROJECTS -> TRY IT */
